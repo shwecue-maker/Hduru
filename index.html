@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffeine Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Caffeine Tracker</h1>
+        <p>Monitor your caffeine intake and stay healthy!</p>
+    </header>
+
+    <main>
+        <!-- Add Drink Section -->
+        <section id="add-drink">
+            <h2>Log Your Drink</h2>
+            <form id="drink-form">
+                <label for="drink-name">Drink Name:</label>
+                <input type="text" id="drink-name" placeholder="Coffee, Tea, Soda..." required>
+
+                <label for="caffeine-amount">Caffeine (mg):</label>
+                <input type="number" id="caffeine-amount" placeholder="e.g., 95" required>
+
+                <button type="submit">Add Drink</button>
+            </form>
+        </section>
+
+        <!-- Daily Intake Section -->
+        <section id="daily-intake">
+            <h2>Today's Caffeine Intake</h2>
+            <p>Total: <span id="total-caffeine">0</span> mg</p>
+            <p>Remaining Allowance: <span id="remaining-caffeine">400</span> mg</p>
+            <ul id="drink-list">
+                <!-- Logged drinks will appear here -->
+            </ul>
+        </section>
+
+        <!-- Chart Section -->
+        <section id="intake-chart">
+            <h2>Weekly Caffeine Trends</h2>
+            <canvas id="caffeineChart" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ by Your Name</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
